@@ -3,14 +3,16 @@
 In this project, I learned how to use regular expressions. I practiced building
 them using Ruby's Oniguruma library.
 
+All code in this directory was tested using [Rubular](https://rubular.com/). Rubular is a Ruby-based regular expression editor. It's a handy way to test regular expressions as you write them.
+
 ## Tasks :page_with_curl:
 
 _Note: Each Ruby script in the project matches regular expressions based on an
 argument passed to it via the command line._
 
-* **0. Simply matching Holberton**
+* **0. Simply matching School**
   * [0-simply_match_school.rb](./0-simply_match_school.rb): Ruby script that
-  matches the regular expression `Holberton`.
+  matches the regular expression `School`.
 
 * **1. Repetition Token #0**
   * [1-repetition_token_0.rb](./1-repetition_token_0.rb): Ruby script that matches

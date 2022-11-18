@@ -1,6 +1,10 @@
 # Postmortem
 
-Upon the release of Alx School's System Python  project, approximately 12hours (EAT), an outage occurred on an isolated Ubuntu 20.04 container running on Apache server. GET requests on the server led to `500 Internal Server Error`'s, when the expected response was an HTML file defining a simple Holberton site..
+Upon the release of ALX's System Engineering & DevOps project 0x19,
+approximately 06:00 West African Time (WAT) here in Nigeria, an outage occurred on an isolated
+Ubuntu 14.04 container running an Apache web server. GET requests on the server led to
+`500 Internal Server Error`'s, when the expected response was an HTML file defining a
+simple Holberton WordPress site.
 
 ## Debugging Process
 
@@ -41,4 +45,21 @@ file name, located in the `wp-content` directory of the application folder, was
 
 Patch involved a simple fix on the typo, removing the trailing `p`.
 
-That was all needed!
+## Prevention
+
+This outage was not a web server error, but an application error. To prevent such outages
+moving forward, please keep the following in mind.
+
+* Test! Test test test. Test the application before deploying. This error would have arisen
+and could have been addressed earlier had the app been tested.
+
+* Status monitoring. Enable some uptime-monitoring service such as
+[UptimeRobot](./https://uptimerobot.com/) to alert instantly upon outage of the website.
+
+Note that in response to this error, I wrote a Puppet manifest
+[0-strace_is_your_friend.pp](https://github.com/bdbaraban/holberton-system_engineering-devops/blob/master/0x17-web_stack_debugging_3/0-strace_is_your_friend.pp)
+to automate fixing of any such identitical errors should they occur in the future. The manifest
+replaces any `phpp` extensions in the file `/var/www/html/wp-settings.php` with `php`.
+
+But of course, it will never occur again, because we're programmers, and we never make
+errors! :wink:

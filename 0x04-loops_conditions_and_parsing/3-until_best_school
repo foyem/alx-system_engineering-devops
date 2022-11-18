@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#This  Displays 'Best School' in stdout 10 times using the until loop
+# Displays 'Best School' in stdout 10 times using the until loop
 
 index=0
 

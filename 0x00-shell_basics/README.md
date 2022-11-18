@@ -1,1 +1,1 @@
-My current working directory script
+# 0x00-shell_basics
